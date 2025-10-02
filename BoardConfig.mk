@@ -10,14 +10,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-DEVICE_PATH := device/samsung/a51
+DEVICE_PATH := device/samsung/r7
 
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := cortex-a73
+TARGET_CPU_VARIANT := cortex-a53
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-a
@@ -29,14 +29,14 @@ TARGET_SUPPORTS_64_BIT_APPS := true
 
 # Bootloader
 BOARD_VENDOR := samsung
-TARGET_SOC := exynos9611
-TARGET_BOOTLOADER_BOARD_NAME := exynos9611
+TARGET_SOC := exynos9810
+TARGET_BOOTLOADER_BOARD_NAME := exynos9810
 
 # Kernel
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image
-BOARD_KERNEL_CMDLINE := androidboot.hardware=exynos9611
+BOARD_KERNEL_CMDLINE := androidboot.hardware=exynos9810
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --header_version 2 --board SRPSG30B004RU
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/recovery_dtbo
@@ -49,7 +49,7 @@ LZMA_RAMDISK_TARGETS := recovery,boot
 BOARD_RAMDISK_USE_LZMA := true
 
 # Platform
-TARGET_BOARD_PLATFORM := exynos9611
+TARGET_BOARD_PLATFORM := exynos9810
 TARGET_BOARD_PLATFORM_GPU := mali-g72
 
 # Filesystem
@@ -60,7 +60,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 61865984
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 71102464
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 71106560
 BOARD_DTBOIMG_PARTITION_SIZE       := 8388608
 
 # TWRP specific build flags
@@ -76,7 +76,7 @@ TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_EXTRA_LANGUAGES := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-TW_DEVICE_VERSION := GrassKernel
+TW_DEVICE_VERSION := AlexFurina
 TW_USE_SAMSUNG_HAPTICS := true
 ALLOW_MISSING_DEPENDENCIES := true
 
